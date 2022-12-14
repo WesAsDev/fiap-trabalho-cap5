@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/dash.css">
+    <title>Finance Center | Dashboard</title>
+</head>
+<body>
+    <!-- <header class="header d-flex justify-content-between align-items-center"> -->
+          
+    <nav class="navbar navbar-expand-lg">
+        <div class="header d-flex justify-content-between align-items-center">
+            <p class="header_title">Dashboard</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="header_menu-icon" src="./assets/icons_menu.svg">
+            </button>
+            
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Logout</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- </header> -->
+
+    <main class="main d-flex flex-column gap-3 align-items-start">
+    
+        <section class="main_saldo d-flex flex-column align-items-center align-self-center">
+            <p>Saldo</p>
+            <h1 id="saldo">R$ 2.153,25</h1>
+        </section>
+
+            
+        <section class="main_historico">
+
+        
+            <section class="main_historico-geral">
+                <h1 class="main_historico-title">Histórico geral</h1>
+                <ul class="lista main_historico-geral_list" ></ul>
+            </section>
+
+            <section class="main_historico-gastos">
+                <h1 class="main_historico-title">Histórico de Gastos</h1>
+                <ul class="lista main_historico-gastos_list" ></ul>
+            </section>
+
+            <section class="main_historico-ganhos">
+                <h1 class="main_historico-title">Histórico de Ganhos</h1>
+                <ul class="lista main_historico-ganhos_list" ></ul>
+            </section>
+        </section>
+        <footer>
+            <button class="btn_novoItem" data-bs-toggle="modal" data-bs-target="#exampleModal">Novo item</button>
+        </footer>
+      
+    </main>
+
+
+    
+  <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column gap-2">
+                <input id="newitem_name" type="text" placeholder="Nome">
+                <input id="newitem_value" type="text" placeholder="Valor">
+                <select id="newitem_type" class="form-select" aria-label="Default select example">
+                    <option selected value="ganho">Ganho</option>
+                    <option value="gasto">Gasto</option>
+                  </select>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="saveChanges" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+
+    
+    
+
+
+    <script src="./scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
